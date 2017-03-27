@@ -1,0 +1,28 @@
+<html>
+
+<head>
+<title>6205 Quiz 2: Part 2</title>
+</head>
+
+<body>
+
+
+<!--begin.rcode
+Insurance <- read.table("~/Desktop/Insurance.txt")
+
+## turn data from data frame to a vector with for loop
+# initiate blank vector
+insurance.values <- c()
+for (i in 1:length(Insurance)) {
+  insurance.values <- c(insurance.values, Insurance[i])
+}
+
+## perform summary statistics
+summary.stats <- summary(insurance.values)
+print(summary.stats)
+
+## 
+end.rcode-->
+
+</body>
+</html>

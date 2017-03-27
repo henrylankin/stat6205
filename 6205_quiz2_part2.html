@@ -1,0 +1,145 @@
+<html>
+
+<head>
+<style type="text/css">
+.knitr .inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.rimage .left {
+  text-align: left;
+}
+.rimage .right {
+  text-align: right;
+}
+.rimage .center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<title>6205 Quiz 2: Part 2</title>
+</head>
+
+<body>
+
+
+<div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">Insurance</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">read.table</span><span class="hl std">(</span><span class="hl str">&quot;~/Desktop/Insurance.txt&quot;</span><span class="hl std">)</span>
+</pre></div>
+<div class="warning"><pre class="knitr r">## Warning in read.table(&quot;~/Desktop/Insurance.txt&quot;): incomplete final line
+## found by readTableHeader on '~/Desktop/Insurance.txt'
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl com">## turn data from data frame to a vector with for loop</span>
+<span class="hl com"># initiate blank vector</span>
+<span class="hl std">insurance.values</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">c</span><span class="hl std">()</span>
+<span class="hl kwa">for</span> <span class="hl std">(i</span> <span class="hl kwa">in</span> <span class="hl num">1</span><span class="hl opt">:</span><span class="hl kwd">length</span><span class="hl std">(Insurance)) {</span>
+  <span class="hl std">insurance.values</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">c</span><span class="hl std">(insurance.values, Insurance[i])</span>
+<span class="hl std">}</span>
+
+<span class="hl com">## perform summary statistics</span>
+<span class="hl std">summary.stats</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">summary</span><span class="hl std">(insurance.values)</span>
+<span class="hl kwd">print</span><span class="hl std">(summary.stats)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">##     Length Class  Mode   
+## V1  1      -none- numeric
+## V2  1      -none- numeric
+## V3  1      -none- numeric
+## V4  1      -none- numeric
+## V5  1      -none- numeric
+## V6  1      -none- numeric
+## V7  1      -none- numeric
+## V8  1      -none- numeric
+## V9  1      -none- numeric
+## V10 1      -none- numeric
+## V11 1      -none- numeric
+## V12 1      -none- numeric
+## V13 1      -none- numeric
+## V14 1      -none- numeric
+## V15 1      -none- numeric
+## V16 1      -none- numeric
+## V17 1      -none- numeric
+## V18 1      -none- numeric
+## V19 1      -none- numeric
+## V20 1      -none- numeric
+## V21 1      -none- numeric
+## V22 1      -none- numeric
+## V23 1      -none- numeric
+## V24 1      -none- numeric
+## V25 1      -none- numeric
+## V26 1      -none- numeric
+## V27 1      -none- numeric
+## V28 1      -none- numeric
+## V29 1      -none- numeric
+## V30 1      -none- numeric
+## V31 1      -none- numeric
+## V32 1      -none- numeric
+## V33 1      -none- numeric
+## V34 1      -none- numeric
+## V35 1      -none- numeric
+## V36 1      -none- numeric
+## V37 1      -none- numeric
+## V38 1      -none- numeric
+## V39 1      -none- numeric
+## V40 1      -none- numeric
+## V41 1      -none- numeric
+## V42 1      -none- numeric
+## V43 1      -none- numeric
+## V44 1      -none- numeric
+## V45 1      -none- numeric
+## V46 1      -none- numeric
+## V47 1      -none- numeric
+## V48 1      -none- numeric
+## V49 1      -none- numeric
+## V50 1      -none- numeric
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl com">## </span>
+</pre></div>
+</div></div>
+
+</body>
+</html>
